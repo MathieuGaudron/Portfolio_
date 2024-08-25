@@ -12,7 +12,7 @@ const Sidebar = () => {
     <div>
       <button 
         onClick={toggleSidebar} 
-        className="fixed top-4 left-4 z-30 text-white focus:outline-none transform transition-transform hover:scale-125 duration-500"
+        className="fixed top-4 left-4 z-30 text-white bg-black p-2 rounded-md focus:outline-none transform transition-transform hover:scale-125 duration-500"
       >
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>

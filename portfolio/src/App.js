@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: true, 
+      once: true,
     });
   }, []);
 
@@ -36,16 +36,18 @@ const App = () => {
             <Propos />
           </div>
 
-          
-          <div className="flex flex-col lg:flex-row gap-8 px-8 mt-12" data-aos="fade-up">
-            
-            <div className="w-full lg:w-1/2">
+          <div className="flex flex-col lg:flex-row gap-8 px-8 mt-12">
+            <div className="w-full lg:w-1/2" data-aos="fade-up">
               <Contact />
             </div>
-            
-            <div className="w-full lg:w-1/2">
+
+            <div className="w-full lg:w-1/2" data-aos="fade-up">
               <Competences />
             </div>
+          </div>
+
+          <div className="w-full mt-12" data-aos="fade-up">
+            <Projets />
           </div>
 
           <Routes>
