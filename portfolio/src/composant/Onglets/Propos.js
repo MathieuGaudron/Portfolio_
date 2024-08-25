@@ -8,10 +8,10 @@ const Propos = () => {
         <img 
           src="/assets/photo_cv_epitech.jpg" 
           alt="Profile"
-          className="w-40 h-40 rounded-full object-cover shadow-lg mb-6 lg:mb-0 lg:mr-8"/>
+          className="w-40 h-40 rounded-full object-cover shadow-lg mb-6 lg:mb-0 lg:mr-8 transform transition-transform hover:scale-125 duration-500"/>
       </div>
 
-      <div className="text-center lg:text-left">
+      <div className="text-center lg:text-left transform transition-transform hover:scale-105 duration-500">
         <h3 className="text-lg leading-relaxed font-semibold">
           Découvrez ici mon univers en parcourant mon portfolio. Je présenterai ici mes projets et mon experience. <br /> 
           Je suis étudiant à la <span className="font-bold"> Web@cademie by Epitech</span>, et je suis à la recherche 
