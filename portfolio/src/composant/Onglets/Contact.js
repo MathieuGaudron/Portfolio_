@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className="bg-gray-800 p-8 my-8 mx-auto max-w-3xl rounded-lg shadow-lg bg-opacity-60 transform transition-transform hover:scale-105 duration-500 ">
 
-      <h2 className='text-white text-4xl text-center mb-12 font-bold'>Mes réseaux</h2>
+      <h2 className='text-white text-4xl text-center mb-12 font-bold transform transition-transform hover:scale-105 duration-500'>Mes réseaux</h2>
 
       <div className="mt-2 mx-auto flex flex-row space-x-4 justify-around">
         <Link to="https://github.com/MathieuGaudron" target="_blank" rel="noopener noreferrer">

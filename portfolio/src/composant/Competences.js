@@ -3,7 +3,7 @@ import React from 'react';
 const Competences = () => {
   return (
     <div className="bg-gray-800 bg-opacity-60 p-12 my-8 mx-auto max-w-6xl rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-500">
-      {/* <h2 className="text-white text-4xl text-center mb-12 font-bold">Compétences</h2> */}
+      <h2 className="text-white text-4xl text-center mb-12 font-bold transform transition-transform hover:scale-105 duration-500">Compétences</h2>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-12 justify-items-center">
         
         <div className="flex flex-col items-center">
