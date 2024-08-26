@@ -6,6 +6,7 @@ import Projets from './composant/Onglets/Projets';
 import Propos from './composant/Onglets/Propos';
 import Contact from './composant/Onglets/Contact';
 import Competences from './composant/Competences';
+import AutoEcole from './composant/Onglets/Projets/AutoEcole';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import './index.css';
@@ -36,24 +37,33 @@ const App = () => {
             <Propos />
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-8 px-8 mt-12">
-            <div className="w-full lg:w-1/2" data-aos="fade-up">
-              <Contact />
-            </div>
 
-            <div className="w-full lg:w-1/2" data-aos="fade-up">
-              <Competences />
-            </div>
-          </div>
+          <div className="lg:col-span-2">
+            <div className="flex flex-col lg:flex-row gap-8 px-8 mt-12">
 
-          <div className="w-full mt-12" data-aos="fade-up">
-            <Projets />
+              <div className="w-full lg:w-1/2 flex flex-col mb-2" data-aos="fade-up">
+                <div className='mb-2'>
+                  <Contact />
+                </div>
+
+                <div className='my-2'>
+                  <Projets />
+                </div>
+              </div>
+
+              <div className="w-full lg:w-1/2" data-aos="fade-up">
+                <Competences />
+              </div>
+              
+            </div>
           </div>
 
           <Routes>
-            <Route path="/Projets" element={<div data-aos="fade-up"><Projets /></div>} />
-            <Route path="/Propos" element={<div data-aos="fade-up"><Propos /></div>} />
-            <Route path="/Contact" element={<div data-aos="fade-up"><Contact /></div>} />
+
+            <Route exact strict path="/Projets" element={<div data-aos="fade-up"><Projets /></div>} />
+            <Route exact strict path="/Propos" element={<div data-aos="fade-up"><Propos /></div>} />
+            <Route exact strict path="/Contact" element={<div data-aos="fade-up"><Contact /></div>} />
+            <Route exact strict path="/Projets/AutoEcole" element={<div data-aos="fade-up"><AutoEcole /></div>} />
           </Routes>
         </div>
       </div>

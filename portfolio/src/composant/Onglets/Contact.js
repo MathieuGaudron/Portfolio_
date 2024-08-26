@@ -10,7 +10,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-800 p-8 my-8 mx-auto max-w-3xl rounded-lg shadow-lg bg-opacity-60 transform transition-transform hover:scale-105 duration-500">
+    <div className="bg-gray-800 p-8 sm:p-12 mx-auto max-w-3xl rounded-lg shadow-lg bg-opacity-60 transform transition-transform hover:scale-105 duration-500">
       <h2 className="text-white text-4xl text-center mb-12 font-bold transform transition-transform hover:scale-105 duration-500">
         Mes contacts
       </h2>
