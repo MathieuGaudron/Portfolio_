@@ -4,7 +4,7 @@ import { SiTailwindcss } from 'react-icons/si';
 
 const Competences = () => {
   return (
-    <div className="bg-gray-800 bg-opacity-60 p-12 mx-auto max-w-6xl rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-500">
+    <div className=" bg-opacity-60 p-12 mx-auto max-w-6xl rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-500">
       <h2 className="text-white text-4xl text-center mb-12 font-bold transform transition-transform hover:scale-105 duration-500">
         Compétences
       </h2>

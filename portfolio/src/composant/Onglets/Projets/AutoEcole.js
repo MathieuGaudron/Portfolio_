@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import '../Carousel.css'; 
+import './CarouselProjet.css';
+import "./Projets.css";
 
 const AutoEcole = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [carouselOpen, setCarouselOpen] = useState(false);
+  const [videoOpen, setVideoOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
@@ -11,21 +13,36 @@ const AutoEcole = () => {
     '/assets/HD_CONDUITE/hdconduite_moto.png'
   ];
 
-  const openModal = (index) => {
-    setCurrentImageIndex(index);
-    setModalOpen(true);
+  const openCarousel = () => {
+    setCarouselOpen(true);
   };
 
-  const closeModal = () => {
-    setModalOpen(false);
+  const closeCarousel = () => {
+    setCarouselOpen(false);
+  };
+
+  const openVideo = () => {
+    setVideoOpen(true);
+  };
+
+  const closeVideo = () => {
+    setVideoOpen(false);
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+    if (currentImageIndex === 0) {
+      setCurrentImageIndex(images.length - 1);
+    } else {
+      setCurrentImageIndex(currentImageIndex - 1);
+    }
   };
 
   const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    if (currentImageIndex === images.length - 1) {
+      setCurrentImageIndex(0);
+    } else {
+      setCurrentImageIndex(currentImageIndex + 1);
+    }
   };
 
   return (
@@ -40,56 +57,68 @@ const AutoEcole = () => {
       </div>
 
       <div className="mb-12">
-        <h2 className="text-3xl font-bold text-white mb-6 transform transition-transform hover:scale-105 duration-500">
-          Cliquez pour voir les photos du projet !
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {images.map((src, index) => (
-            <div key={index} className="relative">
-              <img 
-                src={src} 
-                alt={`Screenshot ${index + 1}`} 
-                className='rounded-lg shadow-lg cursor-pointer'
-                onClick={() => openModal(index)}
-              />
-            </div>
-          ))}
-        </div>
+        <button 
+          onClick={openCarousel}
+          className="btn-grad text-white px-6 py-3 rounded-lg shadow-lgtransform transition-transform hover:scale-105 duration-500">
+          <h2 className="text-3xl font-bold">
+            Photos
+          </h2>
+        </button>
       </div>
 
       <div className="mb-12">
-        <h2 className="text-3xl font-bold text-white mb-6 transform transition-transform hover:scale-105 duration-500">
-          Cliquez pour voir la vidéo du projet !
-        </h2>
-        <div className="relative w-full max-w-4xl mx-auto">
-          <video 
-            src="/assets/HD_CONDUITE/hdconduite_clip.mp4" 
-            controls
-            className="w-full h-auto rounded-lg shadow-lg"
-          />
-        </div>
+        <button 
+          onClick={openVideo}
+          className="btn-grad2 text-white px-6 py-3 rounded-lg shadow-lgtransform transition-transform hover:scale-105 duration-500">
+          <h2 className="text-3xl font-bold">
+            Vidéo
+          </h2>
+        </button>
       </div>
 
-      {modalOpen && (
+
+      {carouselOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
-          <div className="relative max-w-4xl mx-auto">
-            <img src={images[currentImageIndex]} alt={`Modal Image ${currentImageIndex + 1}`} className="w-full h-auto rounded-lg shadow-lg" />
+          <div className="relative max-w-4xl mx-auto  p-4 rounded-lg">
+            <div className="relative">
+              <img 
+                src={images[currentImageIndex]} 
+                alt={`Screenshot ${currentImageIndex + 1}`} 
+                className="w-full h-auto rounded-lg shadow-lg" />
+              <button 
+                onClick={prevImage} 
+                className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gradient-to-r from-blue-600 to-blue-800 text-white p-3 rounded-full hover:from-blue-700 hover:to-blue-900 transition-transform duration-300">
+                &lt;
+              </button>
+              <button 
+                onClick={nextImage} 
+                className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gradient-to-r from-blue-600 to-blue-800 text-white p-3 rounded-full hover:from-blue-700 hover:to-blue-900 transition-transform duration-300">
+                &gt;
+              </button>
+            </div>
             <button 
-              onClick={prevImage} 
-              className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full hover:bg-gray-700"
-            >
-              &lt;
+              onClick={closeCarousel} 
+              className="absolute top-2 right-2 bg-gradient-to-r from-red-600 to-red-800 text-white p-2 rounded-full hover:from-red-700 hover:to-red-900 transition-transform duration-300">
+              X
             </button>
+          </div>
+        </div>
+      )}
+
+ 
+      {videoOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+          <div className="relative max-w-4xl mx-auto p-4 rounded-lg">
+            <div className="relative">
+              <video 
+                src="/assets/HD_CONDUITE/hdconduite_clip.mp4" 
+                autoPlay
+                controls
+                className="w-full h-auto rounded-lg shadow-lg"/>
+            </div>
             <button 
-              onClick={nextImage} 
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full hover:bg-gray-700"
-            >
-              &gt;
-            </button>
-            <button 
-              onClick={closeModal} 
-              className="absolute top-2 right-2 bg-black text-white p-2 rounded-full hover:bg-gray-700"
-            >
+              onClick={closeVideo} 
+              className="absolute top-2 right-2 bg-gradient-to-r from-red-600 to-red-800 text-white p-2 rounded-full hover:from-red-700 hover:to-red-900 transition-transform duration-300">
               X
             </button>
           </div>

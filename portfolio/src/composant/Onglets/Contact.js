@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedin, FaPhoneAlt } from 'react-icons/fa';
+import './Contact.css';
 
 const Contact = () => {
   const [telephone, setTelephone] = useState(false);
@@ -10,7 +11,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-800 p-8 sm:p-12 mx-auto max-w-3xl rounded-lg shadow-lg bg-opacity-60 transform transition-transform hover:scale-105 duration-500">
+    <div className="p-8 sm:p-12 mx-auto max-w-3xl rounded-lg shadow-lg bg-opacity-60 transform transition-transform hover:scale-105 duration-500">
       <h2 className="text-white text-4xl text-center mb-12 font-bold transform transition-transform hover:scale-105 duration-500">
         Mes contacts
       </h2>
@@ -24,7 +25,7 @@ const Contact = () => {
           <FaLinkedin className="text-blue-600 w-16 h-16 transition-transform transform hover:scale-125 hover:brightness-150 duration-300 cursor-pointer" />
         </Link>
 
-        <a href="/CV_DEV_WEB_MATHIEU_GAUDRON.pdf" download className="flex items-center space-x-2 bg-blue-500 text-white px-4 py-2 rounded-lg transition-transform transform hover:scale-110 hover:bg-blue-600 duration-300 cursor-pointer">
+        <a href="/CV_DEV_WEB_MATHIEU_GAUDRON.pdf" download className="btn-cv  transition-transform transform hover:scale-110 hover:brightness-150 duration-300 cursor-pointer ">
           <span>Télécharger mon CV</span>
         </a>
         
@@ -35,7 +36,7 @@ const Contact = () => {
           </button>
 
           {telephone && (
-            <span className="text-white mt-4 text-lg transition-opacity duration-300">
+            <span className="text-white mt-4 text-sm transition-opacity duration-300 ">
               06 28 58 84 49
             </span>
           )}

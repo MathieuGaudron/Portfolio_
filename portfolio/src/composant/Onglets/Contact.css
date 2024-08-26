@@ -1,0 +1,36 @@
+.btn-cv {
+    background-image: linear-gradient(to right, #283048 0%, #859398 51%, #283048 100%);
+    margin: 10px;
+    padding: 10px 30px; 
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    font-size: 14px;
+}
+
+
+.btn-cv:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (min-width: 640px) {
+    .btn-cv {
+        padding: 12px 35px;
+        font-size: 16px; 
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .btn-cv {
+        padding: 15px 45px; 
+        font-size: 18px; 
+    }
+}
