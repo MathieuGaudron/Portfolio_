@@ -1,6 +1,6 @@
 import React from 'react';
-import './Carousel.css';
 import { Link } from 'react-router-dom';
+import './Carousel.css';
 
 const Projets = () => {
   return (
@@ -15,40 +15,40 @@ const Projets = () => {
         <div className="carousel-container opacity-95">
           <div className="carousel flex justify-center items-center space-x-8">
             <div className="carousel-item">
-              <Link to='/Projets/AutoEcole'>
-                <img src='/assets/HD_CONDUITE/hdconduite_accueil2.png' alt='Auto-ecole'/>
+              <Link to="/Projets/AutoEcole">
+                <img src="/assets/HD_CONDUITE/hdconduite_accueil2.png" alt="Auto-ecole" />
                 <div className="overlay">
-                  <h3 className='text-white text-2xl font-bold bg-black bg-opacity-75 p-4 rounded transition-transform hover:scale-105 duration-500 cursor-pointer'>
+                  <h3 className="text-white text-2xl font-bold bg-black bg-opacity-75 p-4 rounded transition-transform hover:scale-105 duration-500 cursor-pointer">
                     AUTO-ECOLE
                   </h3>
                 </div>
               </Link>
             </div>
             <div className="carousel-item">
-              <Link to='/Projets/LeBonCoin'>
-                <img src='/assets/Leboncoin/leboncoin_accueil.png' alt='Projet Le boncoin'/>
+              <Link to="/Projets/LeBonCoin">
+                <img src="/assets/Leboncoin/leboncoin_accueil.png" alt="Projet Le boncoin" />
                 <div className="overlay">
-                  <h3 className='text-white text-2xl font-bold bg-black bg-opacity-75 p-4 rounded transition-transform hover:scale-105 duration-500 cursor-pointer'>
+                  <h3 className="text-white text-2xl font-bold bg-black bg-opacity-75 p-4 rounded transition-transform hover:scale-105 duration-500 cursor-pointer">
                     LE BONCOIN
                   </h3>
                 </div>
               </Link>
             </div>
             <div className="carousel-item">
-              <Link to='/Projets/Puissance4'>
-                <img src='/assets/Puissance4/puissance4_grille.png' alt='Puissance4'/>
+              <Link to="/Projets/Puissance4">
+                <img src="/assets/Puissance4/puissance4_grille.png" alt="Puissance4" />
                 <div className="overlay">
-                  <h3 className='text-white text-2xl font-bold bg-black bg-opacity-75 p-4 rounded transition-transform hover:scale-105 duration-500 cursor-pointer'>
+                  <h3 className="text-white text-2xl font-bold bg-black bg-opacity-75 p-4 rounded transition-transform hover:scale-105 duration-500 cursor-pointer">
                     PUISSANCE 4
                   </h3>
                 </div>
               </Link>
             </div>
             <div className="carousel-item">
-              <Link to='/Projets/Ecommerce'>
-                <img src='/assets/Ecommerce/ecommerce_accueil.png' alt='Ecommerce'/>
+              <Link to="/Projets/Ecommerce">
+                <img src="/assets/Ecommerce/ecommerce_accueil.png" alt="Ecommerce" />
                 <div className="overlay">
-                  <h3 className='text-white text-2xl font-bold bg-black bg-opacity-75 p-4 rounded transition-transform hover:scale-105 duration-500 cursor-pointer'>
+                  <h3 className="text-white text-2xl font-bold bg-black bg-opacity-75 p-4 rounded transition-transform hover:scale-105 duration-500 cursor-pointer">
                     E COMMERCE
                   </h3>
                 </div>

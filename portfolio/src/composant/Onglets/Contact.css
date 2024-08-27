@@ -1,7 +1,7 @@
 .btn-cv {
     background-image: linear-gradient(to right, #283048 0%, #859398 51%, #283048 100%);
     margin: 10px;
-    padding: 10px 30px; 
+    padding: 15px 30px; 
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
@@ -22,7 +22,7 @@
 
 @media (min-width: 640px) {
     .btn-cv {
-        padding: 12px 35px;
+        padding: 22px 35px;
         font-size: 16px; 
     }
 }
@@ -30,7 +30,7 @@
 
 @media (min-width: 1024px) {
     .btn-cv {
-        padding: 15px 45px; 
+        padding: 25px 25px; 
         font-size: 18px; 
     }
 }

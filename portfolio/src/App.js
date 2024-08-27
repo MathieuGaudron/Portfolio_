@@ -10,10 +10,10 @@ import AutoEcole from './composant/Onglets/Projets/AutoEcole';
 import LeBonCoin from './composant/Onglets/Projets/LeBonCoin';
 import Puissance4 from './composant/Onglets/Projets/Puissance4';
 import Ecommerce from './composant/Onglets/Projets/Ecommerce';
+import Home from './composant/Home';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import './index.css';
-
 
 const App = () => {
   useEffect(() => {
@@ -32,45 +32,18 @@ const App = () => {
 
         <Sidebar />
 
-        <div className="relative z-10 flex justify-center flex-col">
-          <div data-aos="fade-up">
-            <Header />
-          </div>
-
-          <div data-aos="fade-up">
-            <Propos />
-          </div>
-
-
-          <div className="lg:col-span-2">
-            <div className="flex flex-col lg:flex-row gap-8 px-8 mt-12">
-
-              <div className="w-full lg:w-1/2 flex flex-col mb-2" data-aos="fade-up">
-                <div className='mb-2'>
-                  <Contact />
-                </div>
-
-                <div className='my-2'>
-                  <Projets />
-                </div>
-              </div>
-
-              <div className="w-full lg:w-1/2" data-aos="fade-up">
-                <Competences />
-              </div>
-              
-            </div>
-          </div>
-
+        <div className="relative z-10 flex flex-col">
+          <Header />
           <Routes>
-
-            <Route exact strict path="/Projets" element={<div data-aos="fade-up"><Projets /></div>} />
-            <Route exact strict path="/Propos" element={<div data-aos="fade-up"><Propos /></div>} />
-            <Route exact strict path="/Contact" element={<div data-aos="fade-up"><Contact /></div>} />
-            <Route exact strict path="/Projets/AutoEcole" element={<div data-aos="fade-up"><AutoEcole /></div>} />
-            <Route exact strict path="/Projets/LeBonCoin" element={<div data-aos="fade-up"><LeBonCoin /></div>} />
-            <Route exact strict path="/Projets/Puissance4" element={<div data-aos="fade-up"><Puissance4 /></div>} />
-            <Route exact strict path="/Projets/Ecommerce" element={<div data-aos="fade-up"><Ecommerce /></div>} />
+            <Route path="/" element={<Home />} />
+            <Route path="/Projets" element={<Projets />} />
+            <Route path="/Propos" element={<Propos />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Competences" element={<Competences />} />
+            <Route path="/Projets/AutoEcole" element={<AutoEcole />} />
+            <Route path="/Projets/LeBonCoin" element={<LeBonCoin />} />
+            <Route path="/Projets/Puissance4" element={<Puissance4 />} />
+            <Route path="/Projets/Ecommerce" element={<Ecommerce />} />
           </Routes>
         </div>
       </div>

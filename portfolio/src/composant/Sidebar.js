@@ -29,9 +29,18 @@ const Sidebar = () => {
           </svg>
         </button>
 
-        <h2 className="text-2xl font-bold text-center pt-16 transform transition duration-300 ease-in-out hover:scale-110">MES PROJETS</h2>
+        <h2 className="text-2xl font-bold text-center pt-16 transform transition duration-300 ease-in-out hover:scale-110">
+          MES PROJETS
+        </h2>
 
         <div className="mt-16 space-y-8 flex flex-col items-center">
+
+          <Link 
+            to="/"
+            onClick={toggleSidebar} 
+            className="inline-block transform transition duration-300 ease-in-out hover:scale-125 font-semibold">
+            HOME
+          </Link>
           <Link 
             to="/Projets/AutoEcole"
             onClick={toggleSidebar} 
