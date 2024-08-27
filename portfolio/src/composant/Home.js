@@ -15,7 +15,7 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <section data-aos="fade-in">
         <Propos />
       </section>
@@ -29,7 +29,7 @@ const Home = () => {
           <Competences />
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
