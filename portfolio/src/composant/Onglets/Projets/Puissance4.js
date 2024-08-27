@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import './CarouselProjet.css';
 import "./Projets.css";
 
-const AutoEcole = () => {
+const Puissance4 = () => {
   const [carouselOpen, setCarouselOpen] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    '/assets/HD_CONDUITE/hdconduite_accueil.png',
-    '/assets/HD_CONDUITE/hdconduite_auto.png',
-    '/assets/HD_CONDUITE/hdconduite_moto.png'
+    '/assets/Puissance4/puissance4_choix.png',
+    '/assets/Puissance4/puissance4_grille.png',
+    '/assets/Puissance4/puissance4_victoire.png'
   ];
 
   const openCarousel = () => {
@@ -111,7 +111,7 @@ const AutoEcole = () => {
           <div className="relative max-w-4xl mx-auto p-4 rounded-lg">
             <div className="relative">
               <video 
-                src="/assets/HD_CONDUITE/hdconduite_clip.mp4" 
+                src="/assets/Puissance4/puissance4.mp4" 
                 autoPlay
                 controls
                 className="w-full h-auto rounded-lg shadow-lg"/>
@@ -128,4 +128,4 @@ const AutoEcole = () => {
   );
 };
 
-export default AutoEcole;
+export default Puissance4;

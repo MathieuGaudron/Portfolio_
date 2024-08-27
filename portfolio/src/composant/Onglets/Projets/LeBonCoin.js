@@ -8,9 +8,9 @@ const AutoEcole = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    '/assets/HD_CONDUITE/hdconduite_accueil.png',
-    '/assets/HD_CONDUITE/hdconduite_auto.png',
-    '/assets/HD_CONDUITE/hdconduite_moto.png'
+    '/assets/Leboncoin/leboncoin_accueil.png',
+    '/assets/Leboncoin/leboncoin_crud.png',
+    '/assets/Leboncoin/leboncoin_recherche.png'
   ];
 
   const openCarousel = () => {
@@ -51,8 +51,12 @@ const AutoEcole = () => {
         <h1 className="text-5xl font-bold text-white mb-4 transform transition-transform hover:scale-105 duration-500">
           Projet Auto-École
         </h1>
+        <p className='text-white'>
+            <span className='font-bold text-white'>Technologie utilisé : </span>
+            Laravel / Twig
+        </p>
         <p className='text-white transform transition-transform hover:scale-105 duration-500'>
-          Découvrez le projet d'auto-école (site vitrine). Ce projet a été conçu pour un ami ayant une auto-école.
+          Projet d'école visant a reproduire, le site leboncoin
         </p>
       </div>
 
@@ -66,7 +70,7 @@ const AutoEcole = () => {
         </button>
       </div>
 
-      <div className="mb-12">
+      {/* <div className="mb-12">
         <button 
           onClick={openVideo}
           className="btn-grad2 text-white px-6 py-3 rounded-lg shadow-lgtransform transition-transform hover:scale-105 duration-500">
@@ -74,7 +78,7 @@ const AutoEcole = () => {
             Vidéo
           </h2>
         </button>
-      </div>
+      </div> */}
 
 
       {carouselOpen && (
@@ -87,18 +91,18 @@ const AutoEcole = () => {
                 className="w-full h-auto rounded-lg shadow-lg" />
               <button 
                 onClick={prevImage} 
-                className="absolute top-1/2 left-4 transform -translate-y-1/2 btn-prevnext opacity-60 transition-transform hover:scale-105 duration-500">
+                className="absolute top-1/2 left-4 transform -translate-y-1/2 btn-prevnext opacity-70 hover:scale-105 transition-transform duration-300">
                 &lt;
               </button>
               <button 
                 onClick={nextImage} 
-                className="absolute top-1/2 right-4 transform -translate-y-1/2 btn-prevnext opacity-60 transition-transform hover:scale-105 duration-500">
+                className="absolute top-1/2 right-4 transform -translate-y-1/2 btn-prevnext opacity-70  transition-transform duration-300">
                 &gt;
               </button>
             </div>
             <button 
               onClick={closeCarousel} 
-              className="absolute top-2 right-2 btn-close opacity-60 transition-transform hover:scale-110 duration-500">
+              className="absolute top-2 right-2 btn-close opacity-60 transition-transform duration-300">
               X
             </button>
           </div>
@@ -111,14 +115,14 @@ const AutoEcole = () => {
           <div className="relative max-w-4xl mx-auto p-4 rounded-lg">
             <div className="relative">
               <video 
-                src="/assets/HD_CONDUITE/hdconduite_clip.mp4" 
+                src="/assets/Leboncoin/leboncoin_clip.mp4" 
                 autoPlay
                 controls
                 className="w-full h-auto rounded-lg shadow-lg"/>
             </div>
             <button 
               onClick={closeVideo} 
-              className="absolute top-2 right-2 btn-close opacity-60 transition-transform hover:scale-105 duration-500">
+              className="absolute top-2 right-2 btn-close opacity-60 transition-transform duration-300">
               X
             </button>
           </div>

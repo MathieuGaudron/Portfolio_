@@ -25,7 +25,7 @@ const Contact = () => {
           <FaLinkedin className="text-blue-600 w-16 h-16 transition-transform transform hover:scale-125 hover:brightness-150 duration-300 cursor-pointer" />
         </Link>
 
-        <a href="/CV_DEV_WEB_MATHIEU_GAUDRON.pdf" download className="btn-cv  transition-transform transform hover:scale-110 hover:brightness-150 duration-300 cursor-pointer ">
+        <a href="/CV_DEV_WEB_MATHIEU_GAUDRON.pdf" download className="btn-cv transition-transform transform hover:scale-110 hover:brightness-150 duration-300 cursor-pointer ">
           <span>Télécharger mon CV</span>
         </a>
         

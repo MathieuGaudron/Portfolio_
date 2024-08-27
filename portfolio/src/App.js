@@ -7,9 +7,13 @@ import Propos from './composant/Onglets/Propos';
 import Contact from './composant/Onglets/Contact';
 import Competences from './composant/Competences';
 import AutoEcole from './composant/Onglets/Projets/AutoEcole';
+import LeBonCoin from './composant/Onglets/Projets/LeBonCoin';
+import Puissance4 from './composant/Onglets/Projets/Puissance4';
+import Ecommerce from './composant/Onglets/Projets/Ecommerce';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import './index.css';
+
 
 const App = () => {
   useEffect(() => {
@@ -64,6 +68,9 @@ const App = () => {
             <Route exact strict path="/Propos" element={<div data-aos="fade-up"><Propos /></div>} />
             <Route exact strict path="/Contact" element={<div data-aos="fade-up"><Contact /></div>} />
             <Route exact strict path="/Projets/AutoEcole" element={<div data-aos="fade-up"><AutoEcole /></div>} />
+            <Route exact strict path="/Projets/LeBonCoin" element={<div data-aos="fade-up"><LeBonCoin /></div>} />
+            <Route exact strict path="/Projets/Puissance4" element={<div data-aos="fade-up"><Puissance4 /></div>} />
+            <Route exact strict path="/Projets/Ecommerce" element={<div data-aos="fade-up"><Ecommerce /></div>} />
           </Routes>
         </div>
       </div>
