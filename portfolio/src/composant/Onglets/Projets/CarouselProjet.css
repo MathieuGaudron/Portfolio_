@@ -1,8 +1,18 @@
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 700px;
-  height: 400px;
+  max-width: 1200px;
+  height: 700px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 700px;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -10,7 +20,8 @@
 
 .carousel-slide {
   display: flex;
-  transition: transform 0.8s ease-in-out; 
+  transition: transform 0.8s ease-in-out;
+  width: 100%;
 }
 
 .carousel-image {
@@ -18,11 +29,18 @@
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
-  transition: transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.carousel-image:hover {
-  transform: scale(1.05);
+.carousel-image.active {
+  opacity: 1;
+}
+
+.carousel-image:not(.active) {
+  opacity: 0;
 }
 
 .carousel-control {
@@ -59,45 +77,42 @@ button {
   outline: none;
 }
 
-         
 .btn-prevnext {
-  background-image: linear-gradient(to right, #979797 0%, #b0b0b0  51%, #979797  100%);
+  background-image: linear-gradient(to right, #979797 0%, #b0b0b0 51%, #979797 100%);
   margin: 10px;
   padding: 8px 18px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;            
+  color: white;
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   display: block;
 }
 
 .btn-prevnext:hover {
-  background-position: right center; 
+  background-position: right center;
   color: #fff;
   text-decoration: none;
 }
 
-
-         
 .btn-close {
-  background-image: linear-gradient(to right, #757F9A 0%, #D7DDE8  51%, #757F9A  100%);
+  background-image: linear-gradient(to right, #757F9A 0%, #D7DDE8 51%, #757F9A 100%);
   margin: 10px;
   padding: 5px 15px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;            
+  color: white;
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   display: block;
 }
 
 .btn-close:hover {
-  background-position: right center; 
+  background-position: right center;
   color: #fff;
   text-decoration: none;
 }
