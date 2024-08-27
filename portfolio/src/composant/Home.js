@@ -15,13 +15,13 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      <section data-aos="fade-in">
+    <div className="container mx-auto px-4">
+      <section data-aos="fade-in" className="mb-12">
         <Propos />
       </section>
 
-      <section className="flex flex-col lg:flex-row gap-8 px-8 mt-12">
-        <div className="w-full lg:w-1/2" data-aos="slide-up">
+      <section className="flex flex-col lg:flex-row gap-8">
+        <div className="w-full lg:w-1/2 mb-8 lg:mb-0" data-aos="slide-up">
           <Contact />
           <Projets />
         </div>

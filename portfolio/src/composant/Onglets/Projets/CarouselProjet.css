@@ -1,28 +1,21 @@
-.carousel-container {
+.carousel-container,
+.video {
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  height: 700px;
+  max-width: 1200px; 
+  height: 700px; 
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.video {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  height: 700px;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
 
 .carousel-slide {
   display: flex;
   transition: transform 0.8s ease-in-out;
   width: 100%;
 }
+
 
 .carousel-image {
   min-width: 100%;
@@ -35,9 +28,11 @@
   left: 0;
 }
 
+
 .carousel-image.active {
   opacity: 1;
 }
+
 
 .carousel-image:not(.active) {
   opacity: 0;
@@ -59,10 +54,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+
 .carousel-control:hover {
   background: rgba(255, 255, 255, 1);
   transform: translateY(-50%) scale(1.1);
 }
+
 
 .carousel-control.left {
   left: 20px;
@@ -76,6 +73,7 @@ button {
   z-index: 10;
   outline: none;
 }
+
 
 .btn-prevnext {
   background-image: linear-gradient(to right, #979797 0%, #b0b0b0 51%, #979797 100%);
@@ -91,11 +89,13 @@ button {
   display: block;
 }
 
+
 .btn-prevnext:hover {
   background-position: right center;
   color: #fff;
   text-decoration: none;
 }
+
 
 .btn-close {
   background-image: linear-gradient(to right, #757F9A 0%, #D7DDE8 51%, #757F9A 100%);
@@ -115,4 +115,54 @@ button {
   background-position: right center;
   color: #fff;
   text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .carousel-container,
+  .video {
+    height: 60vh;
+  }
+
+  .carousel-control {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container,
+  .video {
+    height: 50vh; 
+  }
+
+  .carousel-control {
+    padding: 8px;
+    font-size: 18px;
+  }
+
+  .btn-prevnext,
+  .btn-close {
+    margin: 8px;
+    padding: 6px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container,
+  .video {
+    height: 40vh; 
+  }
+
+  .carousel-control {
+    padding: 6px;
+    font-size: 16px;
+  }
+
+  .btn-prevnext,
+  .btn-close {
+    margin: 6px;
+    padding: 4px 12px;
+    font-size: 12px;
+  }
 }
