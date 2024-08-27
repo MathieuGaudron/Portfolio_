@@ -31,15 +31,23 @@ const Ecommerce = () => {
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+    setCurrentImageIndex((prevIndex) => {
+      if (prevIndex === 0) {
+        return images.length - 1;
+      } else {
+        return prevIndex - 1;
+      }
+    });
   };
-
+  
   const nextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentImageIndex((prevIndex) => {
+      if (prevIndex === images.length - 1) {
+        return 0;
+      } else {
+        return prevIndex + 1;
+      }
+    });
   };
 
   const getImageClassName = (index) => {

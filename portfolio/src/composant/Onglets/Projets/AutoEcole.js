@@ -30,19 +30,23 @@ const AutoEcole = () => {
   };
 
   const prevImage = () => {
-    if (currentImageIndex === 0) {
-      setCurrentImageIndex(images.length - 1);
-    } else {
-      setCurrentImageIndex(currentImageIndex - 1);
-    }
+    setCurrentImageIndex((prevIndex) => {
+      if (prevIndex === 0) {
+        return images.length - 1;
+      } else {
+        return prevIndex - 1;
+      }
+    });
   };
-
+  
   const nextImage = () => {
-    if (currentImageIndex === images.length - 1) {
-      setCurrentImageIndex(0);
-    } else {
-      setCurrentImageIndex(currentImageIndex + 1);
-    }
+    setCurrentImageIndex((prevIndex) => {
+      if (prevIndex === images.length - 1) {
+        return 0;
+      } else {
+        return prevIndex + 1;
+      }
+    });
   };
 
   const getImageClassName = (index) => {

@@ -31,15 +31,23 @@ const Puissance4 = () => {
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+    setCurrentImageIndex((prevIndex) => {
+      if (prevIndex === 0) {
+        return images.length - 1;
+      } else {
+        return prevIndex - 1;
+      }
+    });
   };
-
+  
   const nextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentImageIndex((prevIndex) => {
+      if (prevIndex === images.length - 1) {
+        return 0;
+      } else {
+        return prevIndex + 1;
+      }
+    });
   };
 
   const getImageClassName = (index) => {
@@ -96,8 +104,7 @@ const Puissance4 = () => {
               src="/assets/Puissance4/puissance4.mp4"
               autoPlay
               controls
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
+              className="w-full h-auto rounded-lg shadow-lg"/>
           </div>
           <button
             onClick={closeVideo}
@@ -127,8 +134,7 @@ const Puissance4 = () => {
       <div className="mb-12" data-aos="fade-in" data-aos-delay="200">
         <button
           onClick={openCarousel}
-          className="btn-grad text-white px-6 py-3 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-500"
-        >
+          className="btn-grad text-white px-6 py-3 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-500">
           <h2 className="text-3xl font-bold">Photos</h2>
         </button>
       </div>
@@ -136,8 +142,7 @@ const Puissance4 = () => {
       <div className="mb-12" data-aos="fade-in" data-aos-delay="400">
         <button
           onClick={openVideo}
-          className="btn-grad2 text-white px-6 py-3 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-500"
-        >
+          className="btn-grad2 text-white px-6 py-3 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-500">
           <h2 className="text-3xl font-bold">Vidéo</h2>
         </button>
       </div>
