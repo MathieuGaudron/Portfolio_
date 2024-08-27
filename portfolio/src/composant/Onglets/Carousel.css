@@ -9,7 +9,7 @@
 }
 
 .carousel {
-  width: 100%;
+  width: 60%;
   height: 300px;
   position: relative;
   transform-style: preserve-3d;
@@ -41,14 +41,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0); 
+  background: rgba(156, 156, 156, 0.2);
   transition: background 0.5s ease;
   z-index: 1; 
 }
 
 
 .carousel-item:hover .overlay {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(240, 24, 24, 0); 
 }
 
 

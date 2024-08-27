@@ -12,7 +12,7 @@ const Projets = () => {
       </div>
 
       <div className="flex justify-center items-center transform transition-transform hover:scale-105 duration-500 cursor-pointer">
-        <div className="carousel-container">
+        <div className="carousel-container opacity-95">
           <div className="carousel flex justify-center items-center space-x-8">
             <div className="carousel-item">
               <Link to='/Projets/AutoEcole'>

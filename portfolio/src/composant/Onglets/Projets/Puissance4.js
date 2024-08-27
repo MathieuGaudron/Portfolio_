@@ -49,10 +49,10 @@ const Puissance4 = () => {
     <div className="flex flex-col items-center text-center py-16 px-4">
       <div className="mb-12">
         <h1 className="text-5xl font-bold text-white mb-4 transform transition-transform hover:scale-105 duration-500">
-          Projet Auto-École
+          PUISSANCE 4
         </h1>
         <p className='text-white transform transition-transform hover:scale-105 duration-500'>
-          Découvrez le projet d'auto-école (site vitrine). Ce projet a été conçu pour un ami ayant une auto-école.
+          Petit exercice manipulation du DOM 
         </p>
       </div>
 
