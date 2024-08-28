@@ -26,7 +26,7 @@ const App = () => {
   return (
     <Router>
       <div className="relative min-h-screen">
-        <video autoPlay muted loop className="absolute inset-0 w-full h-full object-cover z-[-10]">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-[-10]">
           <source src="/assets/gif_espace_noir.mp4" type="video/mp4" />
         </video>
 
