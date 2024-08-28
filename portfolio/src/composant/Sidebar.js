@@ -29,41 +29,45 @@ const Sidebar = () => {
           </svg>
         </button>
 
-        <h2 className="text-2xl font-bold text-center pt-16 transform transition duration-300 ease-in-out hover:scale-110">
-          MES PROJETS
-        </h2>
 
-        <div className="mt-16 space-y-8 flex flex-col items-center">
+        
+          <Link to="/"
+            onClick={toggleSidebar}
+            className="text-lg font-bold text-center pt-20 flex justify-center transform transition duration-300 ease-in-out hover:scale-110">
+            HOME
+          </Link>
+
+        <div className="mt-16 space-y-8 flex flex-col items-center pt-6">
 
           <Link 
             to="/"
             onClick={toggleSidebar} 
-            className="inline-block transform transition duration-300 ease-in-out hover:scale-125 font-semibold">
-            HOME
+            className="inline-block transform transition duration-300 ease-in-out hover:scale-110 font-semibold text-2xl py-10">
+            MES PROJETS
           </Link>
           <Link 
             to="/Projets/AutoEcole"
             onClick={toggleSidebar} 
-            className="inline-block transform transition duration-300 ease-in-out hover:scale-125">
+            className="inline-block transform transition duration-300 ease-in-out hover:scale-110">
           
             AUTO-ECOLE (Site-vitrine)
           </Link>
           <Link 
             to="/Projets/LeBonCoin" 
             onClick={toggleSidebar} 
-            className="inline-block transform transition duration-300 ease-in-out hover:scale-125">
+            className="inline-block transform transition duration-300 ease-in-out hover:scale-110">
               LE BONCOIN
           </Link>
           <Link 
             to="/Projets/Puissance4" 
             onClick={toggleSidebar} 
-            className="inline-block transform transition duration-300 ease-in-out hover:scale-125">
+            className="inline-block transform transition duration-300 ease-in-out hover:scale-110">
             PUISSANCE 4
           </Link>
           <Link 
             to="/Projets/Ecommerce" 
             onClick={toggleSidebar} 
-            className="inline-block transform transition duration-300 ease-in-out hover:scale-125">
+            className="inline-block transform transition duration-300 ease-in-out hover:scale-110">
             E COMMERCE
           </Link>
         </div>

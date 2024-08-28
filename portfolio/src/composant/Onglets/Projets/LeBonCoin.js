@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaGithub } from 'react-icons/fa';
 import './CarouselProjet.css';
 import './Projets.css';
 
@@ -129,6 +131,9 @@ const LeBonCoin = () => {
         <p className='text-white transform transition-transform hover:scale-105 duration-500'>
           Projet d'école visant à reproduire un site d'annonces
         </p>
+        <Link to="https://github.com/MathieuGaudron/LeBoncoin" target="_blank" rel="noopener noreferrer" className='flex justify-center py-10'>
+          <FaGithub className="text-white w-16 h-16 flex justify-center transition-transform transform hover:scale-125 hover:brightness-50 hover:contrast-125 hover:shadow-lg duration-300 cursor-pointer" />
+        </Link>
       </div>
 
       <div className="mb-12" data-aos="fade-in" data-aos-delay="200">

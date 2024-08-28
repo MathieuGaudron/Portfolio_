@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPhp, FaSymfony, FaDatabase } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPhp, FaSymfony, FaDatabase, FaNode, FaLaravel, FaWordpress } from 'react-icons/fa';
+import { SiMongodb } from "react-icons/si";
 import { SiTailwindcss } from 'react-icons/si';
 
 const Competences = () => {
@@ -41,13 +42,33 @@ const Competences = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <FaSymfony className="text-black w-24 h-24 transition-transform transform hover:scale-125 duration-300 cursor-pointer" />
+          <FaSymfony className="text-white w-24 h-24 transition-transform transform hover:scale-125 duration-300 cursor-pointer" />
           <span className="text-white mt-4">Symfony</span>
         </div>
 
         <div className="flex flex-col items-center">
           <FaDatabase className="text-yellow-700 w-24 h-24 transition-transform transform hover:scale-125 duration-300 cursor-pointer" />
           <span className="text-white mt-4">MySQL</span>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <FaNode className="text-green-800 w-24 h-24 transition-transform transform hover:scale-125 duration-300 cursor-pointer" />
+          <span className="text-white mt-4">Node JS</span>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <SiMongodb className="text-green-500 w-24 h-24 transition-transform transform hover:scale-125 duration-300 cursor-pointer" />
+          <span className="text-white mt-4">MongoDB</span>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <FaLaravel className="text-red-500 w-24 h-24 transition-transform transform hover:scale-125 duration-300 cursor-pointer" />
+          <span className="text-white mt-4">Laravel</span>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <FaWordpress className="text-blue-400 w-24 h-24 transition-transform transform hover:scale-125 duration-300 cursor-pointer" />
+          <span className="text-white mt-4">WordPress</span>
         </div>
 
       </div>
