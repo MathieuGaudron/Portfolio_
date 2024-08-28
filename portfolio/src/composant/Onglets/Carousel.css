@@ -73,3 +73,22 @@
     transform: rotateY(360deg);
   }
 }
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 200px; 
+  }
+  .carousel-item {
+    transform: rotateY(0deg) translateZ(200px);
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 150px;
+    width: 200px;
+  }
+  .carousel-item {
+    transform: rotateY(0deg) translateZ(50px); 
+  }
+}
