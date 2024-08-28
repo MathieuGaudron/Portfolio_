@@ -6,7 +6,7 @@ const Projets = () => {
   return (
     <div className="p-8 mx-auto max-w-6xl rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-500 sm:p-12">
       <div className="p-6 sm:p-8 text-white">
-        <h2 className="text-white text-4xl text-center mb-12 font-bold transform transition-transform hover:scale-105 duration-500">
+        <h2 className="text-white text-4xl text-center  font-bold transform transition-transform hover:scale-105 duration-500">
           Mes projets
         </h2>
       </div>

@@ -9,23 +9,23 @@ import 'aos/dist/aos.css';
 const Home = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
-      once: true, 
+      duration: 1000,
+      once: true,
     });
   }, []);
 
   return (
     <div className="container mx-auto px-4">
-      <section data-aos="fade-in" className="mb-12">
+      <section data-aos="fade-in" className="mb-8 sm:mb-12">
         <Propos />
       </section>
 
-      <section className="flex flex-col lg:flex-row gap-8">
-        <div className="w-full lg:w-1/2 mb-8 lg:mb-0" data-aos="slide-up">
+      <section className="flex flex-col lg:flex-row gap-4 sm:gap-8">
+        <div className="w-full lg:w-1/2 mb-8 lg:mb-0 mx-0 md:mx-2" data-aos="slide-up">
           <Contact />
           <Projets />
         </div>
-        <div className="w-full lg:w-1/2" data-aos="zoom-in">
+        <div className="w-full lg:w-1/2 mx-0 md:mx-2" data-aos="zoom-in">
           <Competences />
         </div>
       </section>
