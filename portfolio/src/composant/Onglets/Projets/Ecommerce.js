@@ -125,10 +125,10 @@ const Ecommerce = () => {
         </h1>
         <p className='text-white transform transition-transform hover:scale-105 duration-500'>
           <span className='font-bold text-white'>Technologies utilisées : </span>
-          REACT - TAILWIND - CSS
+          REACT - SYMFONY - TAILWIND
         </p>
         <p className='text-white transform transition-transform hover:scale-105 duration-500'>
-          Projet d'école visant à reproduire un site d'annonces
+          Site E-Commerce (Vente de montres)
         </p>
       </div>
 
